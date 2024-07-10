@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drawing App</title>
+  <title>Advanced Drawing App</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="toolbar">
-    <input type="color" id="colorPicker">
-    <input type="range" id="sizePicker" min="1" max="50" value="5">
-    <button id="clearButton">Clear</button>
-    <button id="saveButton">Save</button>
-    <button id="rectangleButton">Rectangle</button>
-    <button id="circleButton">Circle</button>
-    <button id="shareButton">Share</button>
+  <div class="container">
+    <div class="toolbar">
+      <div class="size-picker">
+        <label for="sizePicker"><i class="fa fa-paint-brush" aria-hidden="true"></i></label>
+        <input type="range" id="sizePicker" min="1" max="50" value="5">
+      </div>
+      <div class="color-picker">
+        <label for="colorPicker"><i class="fa fa-tint" aria-hidden="true"></i></label>
+        <input type="color" id="colorPicker">
+      </div>
+      <button id="clearButton"><i class="fa fa-eraser" aria-hidden="true"></i> Clear</button>
+      <button id="saveButton"><i class="fa fa-save" aria-hidden="true"></i> Save</button>
+      <button id="rectangleButton"><i class="fa fa-square-o" aria-hidden="true"></i></button>
+      <button id="circleButton"><i class="fa fa-circle-o" aria-hidden="true"></i></button>
+      <button id="lineButton"><i class="fa fa-minus" aria-hidden="true"></i></button>
+      <button id="starButton"><i class="fa fa-star" aria-hidden="true"></i></button>
+      <button id="shareButton"><i class="fa fa-share" aria-hidden="true"></i> Share</button>
+    </div>
+    <canvas id="drawingCanvas"></canvas>
   </div>
-  <canvas id="drawingCanvas"></canvas>
   <script src="script.js"></script>
 </body>
 </html>
